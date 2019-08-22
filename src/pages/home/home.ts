@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-home',
@@ -8,13 +8,13 @@ import { Http } from '@angular/http';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private http: Http) {
+  constructor(public navCtrl: NavController, private httpClient: HttpClient) {
 
   }
 
   makeApiCall() {
     const url = 'http://numbersapi.com/42';
-    this.http.get(url).subscribe((response) => {
+    this.httpClient.get(url).subscribe((response) => {
       console.log(response);
     });
   }
