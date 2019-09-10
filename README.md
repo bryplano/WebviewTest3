@@ -1,4 +1,4 @@
-## Reproducing The Issue
+## Reproducing The Issue on Android
 
 1. Run `npm install`
 2. Run `ionic cordova platform add android`
